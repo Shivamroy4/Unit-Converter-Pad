@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -42,8 +43,6 @@ class ViewController: UIViewController {
     @IBOutlet var KilometerLabel: UILabel!
    
     
-    
-    
    
     
     @IBOutlet var MeterButton: UIButton!
@@ -68,8 +67,12 @@ class ViewController: UIViewController {
         var KilometerDisplay:String = String(format:"%f", KilometerOutput)
         
        
-        KilometerLabel.text = KilometerDisplay
+        KilometerLabel.text = KilometerDisplay + " Kilometers"
        
+        
+        
+        
+        
         
         
     }
@@ -77,7 +80,7 @@ class ViewController: UIViewController {
    
     
     
-
+    
     
     
 }
