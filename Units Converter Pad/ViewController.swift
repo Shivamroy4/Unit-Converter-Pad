@@ -30,8 +30,21 @@ class ViewController: UIViewController {
 }
 
 
+// Function for converting the string in Text Field to Double Value for Calculations . StringtoDouble
 
-   class LengthPage: UIViewController {
+func StringtoDouble(UnitInput: UITextField) -> Double {
+    
+    var UnitValue = (UnitInput.text as NSString).doubleValue
+    return UnitValue
+    
+}
+
+
+
+// Length Page starts here .
+
+
+    class LengthPage: UIViewController {
 
     @IBOutlet var LengthLabel: UILabel!
     
@@ -44,6 +57,11 @@ class ViewController: UIViewController {
    
     
    
+    
+    
+    
+    
+    // Meter Operations
     
     @IBOutlet var MeterButton: UIButton!
     
@@ -58,11 +76,12 @@ class ViewController: UIViewController {
     
     @IBAction func MeterConvertButton(sender: AnyObject) {
         
-        var MeterValue = (MeterInput.text as NSString).doubleValue
+        var MeterValue = StringtoDouble(MeterInput)
+        
         
         var KilometerOutput: Double = MeterValue / 1000
         
-        println(" Meter is \(MeterValue) and Kilometer is \(KilometerOutput).")
+        
         
         var KilometerDisplay:String = String(format:"%f", KilometerOutput)
         
@@ -71,11 +90,7 @@ class ViewController: UIViewController {
        
         
         
-        
-        
-        
-        
-    }
+        }
    
    
     
