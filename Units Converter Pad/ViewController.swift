@@ -13,14 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+   
     @IBOutlet var LengthButton: UIButton!
    
     
@@ -57,22 +59,15 @@ func DoubletoString(UnitOutput: Double) ->String{
 
 
     class LengthPage: UIViewController {
-
-    @IBOutlet var LengthLabel: UILabel!
     
     @IBOutlet var MeterInput: UITextField!
     
     @IBOutlet var MeterConvertButton: UIButton!
 
-    
-    @IBOutlet var KilometerLabel: UILabel!
+    @IBOutlet var KilometerInput: UITextField!
    
     
-   
-    
-    
-    
-    
+        
     // Meter Operations
     
     @IBOutlet var MeterButton: UIButton!
@@ -114,9 +109,12 @@ func DoubletoString(UnitOutput: Double) ->String{
         var KilometerOutput: Double = MeterValue / 1000
         
         var KilometerDisplay = DoubletoString(KilometerOutput)
+        
+        KilometerInput.hidden = false
        
-        KilometerLabel.text = KilometerDisplay
-       
+        KilometerInput.text = KilometerDisplay
+        
+        KilometerInput.userInteractionEnabled = false
         
         
         }
