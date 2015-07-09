@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Looks for single or multiple taps.
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         
     }
 
@@ -55,6 +59,7 @@ func DoubletoString(UnitOutput: Double) ->String{
 }
 
 
+
 // Length Page starts here .
 
 
@@ -66,9 +71,17 @@ func DoubletoString(UnitOutput: Double) ->String{
 
     @IBOutlet var KilometerInput: UITextField!
    
+        
+        //Function to hide keyboard when tapped on screen . Calls this function when the tap is recognized.
+        
+        func HideKeyboard(){
+            //Causes the view (or one of its embedded text fields) to resign the first responder status.
+            view.endEditing(true)
+        }
     
         
-    // Meter Operations
+   
+        // Meter Operations
     
     @IBOutlet var MeterButton: UIButton!
     
@@ -116,6 +129,9 @@ func DoubletoString(UnitOutput: Double) ->String{
         
         KilometerInput.userInteractionEnabled = false
         
+        
+        
+        HideKeyboard()
         
         }
    
