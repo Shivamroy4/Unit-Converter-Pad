@@ -411,6 +411,7 @@
 				6C11695D1B48E05000489FD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C11695E1B48E05000489FD4 /* Build configuration list for PBXNativeTarget "Units Converter PadTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				6C1169601B48E05000489FD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

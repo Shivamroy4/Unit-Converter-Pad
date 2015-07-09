@@ -41,6 +41,18 @@ func StringtoDouble(UnitInput: UITextField) -> Double {
 
 
 
+// Function for converting the converted Double valu to String for display . DoubletoString
+
+func DoubletoString(UnitOutput: Double) ->String{
+   
+    
+    var UnitDisplay:String = String(format:"%f", UnitOutput)
+
+    return UnitDisplay
+
+}
+
+
 // Length Page starts here .
 
 
@@ -79,26 +91,19 @@ func StringtoDouble(UnitInput: UITextField) -> Double {
         var MeterValue = StringtoDouble(MeterInput)
         
         
+       
+        
         var KilometerOutput: Double = MeterValue / 1000
         
-        
-        
-        var KilometerDisplay:String = String(format:"%f", KilometerOutput)
-        
+        var KilometerDisplay = DoubletoString(KilometerOutput)
        
-        KilometerLabel.text = KilometerDisplay + " Kilometers"
+        KilometerLabel.text = KilometerDisplay
        
         
         
         }
    
-   
-    
-    
-    
-    
-    
-}
+   }
 
 
 
