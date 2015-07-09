@@ -78,14 +78,32 @@ func DoubletoString(UnitOutput: Double) ->String{
     @IBOutlet var MeterButton: UIButton!
     
     
-    @IBAction func MeterButton(sender: UIButton) {
+   
+        // Shows UITextField when corresponding button is pressed
+        
+        @IBAction func MeterButton(sender: UIButton) {
         
         MeterInput.hidden = false
-    }
-    
-    
+        
    
+        
+        }
     
+       // Shows CONVERT Button when data is entered into the UITextField
+        
+        
+        @IBAction func MeterInput(sender: AnyObject) {
+            
+            if MeterInput.text.isEmpty == false {
+                
+                MeterConvertButton.hidden = false
+            }
+
+        }
+   
+    // Meter to other Units Conversion
+        
+        
     @IBAction func MeterConvertButton(sender: AnyObject) {
         
         var MeterValue = StringtoDouble(MeterInput)
