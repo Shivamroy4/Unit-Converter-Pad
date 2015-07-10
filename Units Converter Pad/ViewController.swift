@@ -52,7 +52,7 @@ func StringtoDouble(UnitInput: UITextField) -> Double {
 func DoubletoString(UnitOutput: Double) ->String{
    
     
-    var UnitDisplay:String = String(format:"%.03f", UnitOutput)
+    var UnitDisplay:String = String(format:"%f", UnitOutput)
 
     return UnitDisplay
 
@@ -215,15 +215,103 @@ func DoubletoString(UnitOutput: Double) ->String{
         var MeterValue = StringtoDouble(Meter)
         
         
-       var KilometerOutput: Double = MeterValue / 1000
+        
+        // Meter to Kilometer
+        
+       var KilometerOutput: Double = MeterValue * 0.001
         
         var KilometerDisplay: String = DoubletoString(KilometerOutput)
         
         DisplayUnit(Kilometer,UnitDisplay: KilometerDisplay)
         
+       // Meter to Inch
+        
+        var InchOutput: Double = MeterValue * 39.37007874
+        
+        var InchDisplay: String = DoubletoString(InchOutput)
+        
+        DisplayUnit(Inch,UnitDisplay: InchDisplay)
+        
+        // Meter to Foot
+        
+        var FootOutput: Double = MeterValue * 3.2808399
+        
+        var FootDisplay: String = DoubletoString(FootOutput)
+        
+        DisplayUnit(Foot,UnitDisplay: FootDisplay)
         
         
+        // Meter to Mile
         
+        var MileOutput: Double = MeterValue * 0.00062137
+        
+        var MileDisplay: String = DoubletoString(MileOutput)
+        
+        DisplayUnit(Mile,UnitDisplay: MileDisplay)
+        
+
+        // Meter to Angtrom
+        
+        var AngstromOutput: Double = MeterValue * 10000000000
+        
+        var AngstromDisplay: String = DoubletoString(AngstromOutput)
+        
+        DisplayUnit(Angstrom,UnitDisplay: AngstromDisplay)
+        
+        // Meter to Centimeter
+        
+        var CentimeterOutput: Double = MeterValue * 100
+        
+        var CentimeterDisplay: String = DoubletoString(CentimeterOutput)
+        
+        DisplayUnit(Centimeter,UnitDisplay: CentimeterDisplay)
+        
+        
+        // Meter to Yard
+        
+        var YardOutput: Double = MeterValue * 1.0936133
+        
+        var YardDisplay: String = DoubletoString(YardOutput)
+        
+        DisplayUnit(Yard,UnitDisplay: YardDisplay)
+
+        
+        // Meter to Furlong
+        
+        var FurlongOutput: Double = MeterValue * 0.00497097
+        
+        var FurlongDisplay: String = DoubletoString(FurlongOutput)
+        
+        DisplayUnit(Furlong,UnitDisplay: FurlongDisplay)
+        
+        
+        // Meter to Hand
+        
+        var HandOutput: Double = MeterValue * 9.84251969
+        
+        var HandDisplay: String = DoubletoString(HandOutput)
+        
+        DisplayUnit(Hand,UnitDisplay: HandDisplay)
+
+        
+        // Meter to Fathom
+        
+        var FathomOutput: Double = MeterValue * 0.54680665
+        
+        var FathomDisplay: String = DoubletoString(FathomOutput)
+        
+        DisplayUnit(Fathom,UnitDisplay: FathomDisplay)
+        
+
+        // Meter to Decimeter
+        
+        var DecimeterOutput: Double = MeterValue * 10
+        
+        var DecimeterDisplay: String = DoubletoString(DecimeterOutput)
+        
+        DisplayUnit(Decimeter,UnitDisplay: DecimeterDisplay)
+        
+
         
         HideKeyboard()
         }
