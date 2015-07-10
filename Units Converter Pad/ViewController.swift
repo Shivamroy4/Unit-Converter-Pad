@@ -190,6 +190,37 @@ func DoubletoString(UnitOutput: Double) ->String{
         @IBAction func MeterButton(sender: UIButton) {
         
         Meter.hidden = false
+            
+            // Hiding other UITextFields on Button press
+            
+            Kilometer.hidden = true
+            Inch.hidden = true
+            Foot.hidden = true
+            Mile.hidden = true
+            Angstrom.hidden = true
+            Centimeter.hidden = true
+            Yard.hidden = true
+            Furlong.hidden = true
+            Hand.hidden = true
+            Fathom.hidden = true
+            Decimeter.hidden = true
+            
+            
+            // Hiding other Convert Buttons on Button press
+            
+            KilometerConvertButton.hidden = true
+            InchConvertButton.hidden = true
+            FootConvertButton.hidden = true
+            MileConvertButton.hidden = true
+            AngstromConvertButton.hidden = true
+            CentimeterConvertButton.hidden = true
+            YardConvertButton.hidden = true
+            FurlongConvertButton.hidden = true
+            HandConvertButton.hidden = true
+            FathomConvertButton.hidden = true
+            DecimeterConvertButton.hidden = true
+            
+            
         
    
         
@@ -316,6 +347,8 @@ func DoubletoString(UnitOutput: Double) ->String{
         HideKeyboard()
         }
    
+        
+        
    }
 
 
